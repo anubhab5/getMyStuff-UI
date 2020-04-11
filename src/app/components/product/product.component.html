@@ -1,0 +1,21 @@
+<div class="card" style="width: 18rem; margin: 1rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{ product.productName }}</h5>
+    <h6 *ngIf="product.productQty" class="card-subtitle mb-2 text-muted">
+      {{ product.productQty }}
+    </h6>
+    <p class="card-text">
+      {{ product.description }}
+    </p>
+    <input
+      *ngIf="product.productQty"
+      type="button"
+      class="btn btn-primary"
+      value="Buy Product"
+      (click)="buyThisProduct(product)"
+    />
+    <div *ngIf="!product.productQty" class="alert alert-danger" role="alert">
+      Product No longer Available
+    </div>
+  </div>
+</div>
