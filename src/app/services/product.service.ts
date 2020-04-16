@@ -6,7 +6,7 @@ import { Product } from '../model/product';
 })
 export class ProductService {
 
-  productList: Array<Product> = [
+  private productList: Array<Product> = [
     {
       "productName": 'IPhone',
       productQty: 45,
@@ -31,4 +31,8 @@ export class ProductService {
   ];
 
   constructor() { }
+
+  getProductList() {
+    return this.productList;
+  }
 }

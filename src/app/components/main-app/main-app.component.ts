@@ -17,7 +17,7 @@ export class MainAppComponent implements OnInit {
   }
 
   getProductList() {
-    return this.productList = this.productSvc.productList;
+    return this.productList = this.productSvc.getProductList();
   }
 
   buyProduct(product: Product) {
