@@ -1,12 +1,12 @@
-<div class="card" style="width: 18rem; margin: 1rem;">
+<div class="card border-success mb-3" style="max-width: 18rem;">
+  <div class="card-header bg-transparent border-success">
+    {{ product.productName | uppercase}}
+  </div>
   <div class="card-body">
-    <h5 class="card-title">{{ product.productName }}</h5>
-    <h6 *ngIf="product.productQty" class="card-subtitle mb-2 text-muted">
-      {{ product.productQty }}
-    </h6>
-    <p class="card-text">
-      {{ product.description }}
-    </p>
+    <h5 class="card-title">Price: {{ product.price | currency: "INR" }}</h5>
+    <p class="card-text">{{ product.description }}</p>
+  </div>
+  <div class="card-footer bg-transparent border-success">
     <input
       *ngIf="product.productQty"
       type="button"
@@ -19,3 +19,6 @@
     </div>
   </div>
 </div>
+<!-- <div class="spinner-border text-primary" role="status">
+  <span class="sr-only">Loading...</span>
+</div> -->

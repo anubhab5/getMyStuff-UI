@@ -1,3 +1,7 @@
-<div *ngFor='let prod of productList'>
-    <app-product [product]='prod' (buyItem)='buyProduct($event)'></app-product>
+<div style="margin: 2rem;">
+  <app-product
+    *ngFor="let prod of getProductList()"
+    [product]="prod"
+    (buyItem)="buyProduct($event)"
+  ></app-product>
 </div>

@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { MainAppComponent } from './components/main-app/main-app.component';
 import { ProductComponent } from './components/product/product.component';
+import { EllipsePipe } from './pipes/ellipse.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { ProductComponent } from './components/product/product.component';
     HeaderComponent,
     FooterComponent,
     MainAppComponent,
-    ProductComponent
+    ProductComponent,
+    EllipsePipe
   ],
   imports: [
     BrowserModule,
